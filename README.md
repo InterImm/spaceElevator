@@ -9,3 +9,8 @@ To-do List:
   - [ ] Driven Oscillatioin
 - [ ] Cargo Disturbance
 - [ ] Coriolis Effect
+
+
+### Math Explained
+
+* [Space Elevator Math](docs/spaceElevatorOscillations.md)
