@@ -1,6 +1,11 @@
 
 > [Read on StackViewer](https://stackedit.io/viewer#!url=https://raw.githubusercontent.com/InterImm/spaceElevator/master/docs/spaceElevatorOscillations.md)
 
+
+
+[toc]
+
+
 ## Simulation
 
 
@@ -100,6 +105,17 @@ In the limit that the string is uniform, the equation is reduced to the wave equ
 u_{xx} - u_{tt} \frac{\rho}{\sigma_0}=0.
 \end{equation}
 
+We assume a simple boundary condition for $u(x,t)$ that
+
+\begin{align}
+u(0,t) &= 0 \\
+u(L,t) & = 0,
+\end{align}
+
+where $L$ is the upper end of the cable.
+
+**This boundary condition imposes the cable to be stationary on both ends. It makes sense since the lower end with be a ground station while the upper end will be attached to a very heavy space station.**
+
 
 ### Cross Area
 
@@ -163,7 +179,7 @@ The two terms in the parentheses is the tension per unit mass on the cross area.
 
 ### Analysis of The Equation of Motion
 
-
+#### Approximation
 
 As we have seen previously, at the limit that $\frac{A(x)'}{A(x)}n\ll 1$, the equation of motion is
 
@@ -171,8 +187,60 @@ As we have seen previously, at the limit that $\frac{A(x)'}{A(x)}n\ll 1$, the eq
 u_{xx} - u_{tt} \frac{\rho}{\sigma_0}=0.
 \end{equation}
 
-1. The period of the system is given by $P = \frac{2 L}{m}\sqrt{ \frac{\rho}{Y} }$, in which $L$ is the total length, $m=0,\pm 1,\pm 2,\cdots$ is the oscillation mode.
-2. 
+The period of the system is given by $P = \frac{2 L}{m}\sqrt{ \frac{\rho}{Y} }$, in which $L$ is the total length, $m=0,\pm 1,\pm 2,\cdots$ is the oscillation mode.
+
+
+
+#### Analytical Attempt
+
+Assuming separable variables $u(x,t) = X(x)T(t)$, we have
+
+\begin{equation}
+\frac{X''}{x}+\frac{A'}{A} \frac{X'}{X} = \frac{T''}{T} v^2,
+\end{equation}
+
+where $v=\sqrt{\frac{\rho}{\sigma_0}}$. The boundary condition becomes
+
+\begin{align}
+X(0) &= 0 \\
+X(L) & = 0.
+\end{align}
+
+Thus the only possibility is that
+
+\begin{align}
+\frac{X''}{x}+\frac{A'}{A} \frac{X'}{X} &=-g ,\\
+ \frac{T''}{T} v^2&=-g .
+\end{align}
+
+The equation for $T$ has a simple solution
+
+\begin{equation}
+T(t) = A_+ \exp\left( i\sqrt{g}/v  t \right) + A_- \exp\left(  -  i\sqrt{g}/v  t  \right).
+\end{equation}
+
+The parameter $g$ should be determined using the equation for $X$ since it has got enough boundary conditions.
+
+Plug in the expression for $A(x')/A(x)$ we have the equation for $X$,
+
+\begin{equation}
+X'' + \frac{\rho}{\sigma_0} \left( -\frac{GM}{x^2} + x\Omega^2 \right) X' + g X =0,
+\end{equation}
+
+which has a Sturm-Liouville form as it has a vanishing boundary condition at both ends
+
+\begin{equation}
+\frac{d}{x} \left(  p(x) \frac{d X}{dx} \right)  + q(x)X = 0, 
+\end{equation}
+
+where 
+
+\begin{align}
+p(x) & = \exp\left( \frac{\rho}{\sigma_0} \left(  \frac{GM}{x} + \frac{1}{2} \Omega^2 x^2 \right)  \right) \\
+q(x) & = g \cdot p(x).
+\end{align}
+
+
 
 
 
