@@ -348,10 +348,31 @@ The period of the system is given by $P = \frac{2 L}{m}\sqrt{ \frac{\rho}{\sigma
 The solution to the wave equation is, in general,
 
 \begin{equation}
-u(x,t) = \sum_{n=1}^{\infty} \left(  A_n \cos \frac{n\pi v t}{L} + B_n \sin \frac{n\pi v t}{L} \right),
+u(x,t) = \sum_{n=1}^{\infty} \left(  A_n \cos \frac{n\pi v t}{L} + B_n \sin \frac{n\pi v t}{L} \right) \sin \frac{n\pi x}{L},
 \end{equation}
 
 where $v=\sqrt{\frac{\rho}{\sigma_0}}$ is the wave speed.
+
+
+To determine the coefficients we need to apply the initial condition
+
+\begin{align}
+u(x,0) & = u_0 \\
+\dot u(x,0) & = u_1.
+\end{align}
+
+As an example we assume that we have a initial condition that the first mode of the oscillation has been excited,
+
+\begin{align}
+u(x,0) & = \Phi \sin(\pi x/L) \\
+\dot u(x,0) & = 0.
+\end{align}
+
+Only the $A_1=\Phi$ will be part of the solution
+
+\begin{equation}
+u(x,t) = \Phi \cos \frac{\pi v t}{L} \sin \frac{\pi x}{L} .
+\end{equation}
 
 
 
@@ -360,6 +381,16 @@ where $v=\sqrt{\frac{\rho}{\sigma_0}}$ is the wave speed.
 
 ### Numerical
 
+
+#### Approximated Equation
+
+In fact, all we need to do in numerical is to find the coefficient given any initial condition.
+
+
+
+#### Exact Equation
+
+**We could also do the simulation for the oscillation with $A'/A$ term.**
 
 **To do numerical calculations, we need to have a dimensionless equation.**
 
