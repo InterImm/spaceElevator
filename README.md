@@ -1,5 +1,11 @@
 ## Space Elevator
 
+![CC BY-NC-SA](assets/cc_byncsa.png)
+
+
+
+-----
+
 To work out some ideas on space elevator.
 
 To-do List:
