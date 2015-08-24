@@ -167,6 +167,103 @@ The term $\frac{A(x)'}{A(x)}$ we need in EoM is given by
 
 The two terms in the parentheses is the tension per unit mass on the cross area.
 
+To determine whether we could drop the first order term in the oscillation equation, the value of $A(x)'/A(x)$ should be determined.
+
+
+
+Or the distance can be scaled by radius of the celestial body to simplify the expression,
+
+\begin{align}
+&-\frac{GM}{x^2} + x \Omega^2 \\
+= & - \frac{G M}{R^2} \frac{R^2}{x^2} + \frac{x}{R} R \Omega^2 \\
+= & - g_0 \left(\frac{1}{x/R}  \right)^2+ \frac{x}{R} R \Omega^2.
+\end{align}
+
+The two contributions are comparable at a distance
+
+\begin{equation}
+\frac{x_{m}}{R} = \sqrt[3]{ \frac{g_0}{\Omega^2 R} }.
+\end{equation}
+
+
+#### Space Elevator on The Earth
+
+> Earth radius: 6367000m
+
+The constants for Earth are $\frac{G M}{R_E^2}  = g_0 = 9.8 \mathrm{m/s^2}$ and $\Omega^2 R_E = 0.034\mathrm{m/s^2}$. The point where the gravity and centrifugal are balanced is
+
+\begin{align}
+\frac{x_{mE}}{R_E} \approx 6.6.
+\end{align}
+
+As a reminder, the geosynchronous orbit is the orbit that gravity is the same as the centrifugal force if the system is rotating with the same angular velocity of earth.
+
+The term $A(x)'/A(x)$ is
+
+\begin{equation}
+\frac{A(x)'}{A(x)} = \frac{A(\hat x_E)'}{R_E A(\hat x_E)} = \frac{\rho}{\sigma_0}\left(  -9.8 /\hat x_E^2 + 3.4\times 10^{-2} \hat x_E \right) \mathrm{m/s^2},
+\end{equation}
+
+where $\hat x_E = \frac{x}{R_E}$.
+
+Just for convenience, the function in terms of distance from the center of the center of Earth (not scaled) is
+
+\begin{align}
+-\frac{GM}{x^2} + x \Omega^2 &= - \frac{4.0\times 10^{14} \mathrm{ m^3/s^2 }}{x^2} + 5.3\times 10^{-9} \mathrm{s^2} \cdot x .
+\end{align}
+
+#### Space Elevator on Mars
+
+> Mars Facts
+> 1. Mass: $6.4\times 10^{23}\mathrm{kg}$ ; 
+> 2. Radius: $3386000\mathrm{m}$ ;
+> 3. Newton's constant: $6.67\times 10^{-11}\mathrm{N m^2/kg^2}$;
+> 4. Angular velocity of Mars rotation: $7.1\times 10^{-5} \mathrm{rad/s}$;
+> 5. Geosynchronous orbit radius of Mars: $20430000\mathrm{m}$.
+
+The constants for Mars are $\frac{G M}{R_M^2}  = g_M = 3.7\mathrm{m/s^2} $ and $\Omega^2 R_M = 0.017 \mathrm{m/s^2}$.
+
+Thus the radius where the gravity and centrifugal force are balanced is
+
+\begin{equation}
+\frac{x_{mM}}{R_M} = 6.0,
+\end{equation}
+
+which gives us the geosynchronous radius of Mars.
+
+The expression of $A(x)'/A(x)$ is
+
+\begin{equation}
+\frac{A(\hat x)'}{A(\hat x)} = \frac{\rho}{\sigma_0} \left(  - 3.7 /\hat x^2 + 0.017 \hat x \right) \mathrm{m/s^2},
+\end{equation}
+
+where $\hat x = \frac{x}{R_M}$. At geosynchronous orbit the term becomes the largest and vanishes. At surface $\hat x = 1$ we have
+
+\begin{align}
+\frac{A(\hat x)'}{A(\hat x)} &= \frac{\rho}{\sigma_0} \left(  - 3.7  + 0.017  \right) \mathrm{m/s^2} \\
+&\approx \frac{\rho}{\sigma_0} 3.7 \mathrm{m/s^2},
+\end{align}
+
+which is usually much smaller than 1 if we explore the maximum strength of the material (which we do). [^4]
+
+As some examples,
+
+1. Steel: $\frac{\rho}{\sigma_m} \sim 10^{-5}$ for max stress.
+2. Carbon fiber: $\frac{\rho}{\sigma_m} \sim 10^{-7}$ for max stress.
+
+**The reason we explore the max stress of the material is to save money on it since we could use the least amount of material.** So the final elevator cable should have almost max stress when the cargo is loaded. For safety reasons we probably would use one or two order of magnitude smaller than the max which doesn't change the fact that this term $A(x)'/A(x)$ is very small.
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -179,19 +276,10 @@ The two terms in the parentheses is the tension per unit mass on the cross area.
 
 ### Analysis of The Equation of Motion
 
-#### Approximation
-
-As we have seen previously, at the limit that $\frac{A(x)'}{A(x)}n\ll 1$, the equation of motion is
-
-\begin{equation}
-u_{xx} - u_{tt} \frac{\rho}{\sigma_0}=0.
-\end{equation}
-
-The period of the system is given by $P = \frac{2 L}{m}\sqrt{ \frac{\rho}{Y} }$, in which $L$ is the total length, $m=0,\pm 1,\pm 2,\cdots$ is the oscillation mode.
 
 
+#### Analytical Attempt for The Complete Oscillation
 
-#### Analytical Attempt
 
 Assuming separable variables $u(x,t) = X(x)T(t)$, we have
 
@@ -241,6 +329,31 @@ q(x) & = g \cdot p(x).
 \end{align}
 
 
+Since we don't really need to solve the complete oscillation due to the fact that $A(x)'/A(x)\ll 1$, it doesn't make a difference whether we could find the analytical solution.
+
+
+#### Approximation
+
+
+So, just drop $A(x)'/A(x)$.
+
+As we have seen previously, at the limit that $\frac{A(x)'}{A(x)}n\ll 1$, the equation of motion is
+
+\begin{equation}
+u_{xx} - u_{tt} \frac{\rho}{\sigma_0}=0.
+\end{equation}
+
+The period of the system is given by $P = \frac{2 L}{m}\sqrt{ \frac{\rho}{\sigma_0} }$, in which $L$ is the total length, $m=0,\pm 1,\pm 2,\cdots$ is the oscillation mode.
+
+The solution to the wave equation is, in general,
+
+\begin{equation}
+u(x,t) = \sum_{n=1}^{\infty} \left(  A_n \cos \frac{n\pi v t}{L} + B_n \sin \frac{n\pi v t}{L} \right),
+\end{equation}
+
+where $v=\sqrt{\frac{\rho}{\sigma_0}}$ is the wave speed.
+
+
 
 
 
@@ -277,3 +390,5 @@ where we used the notation $A_{\hat x}$ for $\frac{\mathrm dA(x)}{\mathrm d \hat
 [^2]: Jerome Pearson, The orbital tower: A spacecraft launcher using the Earth's rotational energy, Acta Astronautica, Volume 2, Issues 9–10, September–October 1975, Pages 785-799, ISSN 0094-5765, http://dx.doi.org/10.1016/0094-5765(75)90021-1.
 
 [^3]: Edwards B C and Westling E A 2003 The Space Elevator: A Revolutionary Earth-to-Space Transportation System Spageo Inc.
+
+[^4]: [Space Elevator Notes by Probe](https://www.zybuluo.com/probe/note/101784)
