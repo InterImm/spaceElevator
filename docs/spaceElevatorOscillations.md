@@ -375,7 +375,7 @@ u(x,t) = \Phi \cos \frac{\pi v t}{L} \sin \frac{\pi x}{L} .
 \end{equation}
 
 
-
+In fact, all we need to do is to find the coefficients given any initial condition, which is not alway an easy task.
 
 
 
@@ -384,7 +384,7 @@ u(x,t) = \Phi \cos \frac{\pi v t}{L} \sin \frac{\pi x}{L} .
 
 #### Approximated Equation
 
-In fact, all we need to do in numerical is to find the coefficient given any initial condition.
+Given a complicated initial condition, the analytical approach is not solvable.
 
 
 
