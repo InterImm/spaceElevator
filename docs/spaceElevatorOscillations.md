@@ -357,8 +357,8 @@ where $v=\sqrt{\frac{\rho}{\sigma_0}}$ is the wave speed.
 To determine the coefficients we need to apply the initial condition
 
 \begin{align}
-u(x,0) & = u_0 \\
-\dot u(x,0) & = u_1.
+u(x,0) & = u_0(x) \\
+\dot u(x,0) & = u_1(x).
 \end{align}
 
 As an example we assume that we have a initial condition that the first mode of the oscillation has been excited,
@@ -377,6 +377,43 @@ u(x,t) = \Phi \cos \frac{\pi v t}{L} \sin \frac{\pi x}{L} .
 
 In fact, all we need to do is to find the coefficients given any initial condition, which is not alway an easy task.
 
+As a general discussion, initial condition
+
+\begin{align}
+u(x,0) & = u_0(x) \\
+\dot u(x,0) & = u_1(x),
+\end{align}
+
+together with the solution
+
+\begin{align}
+u(x,t) &= \sum_{n=1}^{\infty} \left(  A_n \cos \frac{n\pi v t}{L} + B_n \sin \frac{n\pi v t}{L} \right) \sin \frac{n\pi x}{L}\\
+& = \sum_{n=1}^{\infty} \left(  A_n \cos ( k_n v t)+ B_n \sin (k_n vt) \right) \sin ( k_n  x),
+\end{align}
+
+in which $k_n = \frac{n\pi }{L}$,  result in
+
+\begin{align}
+u_0(x) &= \sum_{n=1}^{\infty} A_n \sin (k_n x) , \\
+u_1(x) & = \sum_{n=1}^{\infty} B_n k_n v \sin(k_n x).
+\end{align}
+
+
+
+> Orthogonality of trigonometric functions are
+> \begin{align} \int_0^{2\pi} \cos m x \cos n x dx &= 0 ,\\ \int_0^{2\pi} \sin m x \sin n x dx &= 0, \\ \int_0^{2\pi} \sin nx \cos m x dx & = 0.  \end{align}
+> Also notice that
+> \begin{align}  \int_0^{2\pi} \sin n x \cos n x dx &= 0 , \\ \int_0^{2\pi} \sin n x \sin n x  dx & = \pi ,\\   \int_0^{2\pi} \cos n x \cos n x  dx & = \pi .  \end{align}
+
+We apply the orthogonality of sines and cosines to the initial condition,
+
+\begin{align}
+A_m  & = \frac{1}{L} \int_0^{2L} u_0(x) \sin ( k_m x), \\
+B_m &= \frac{1}{m \pi v} \int_0^{2L} u_1(x) \sin(k_m x).
+\end{align}
+
+
+
 
 
 ### Numerical
@@ -384,7 +421,9 @@ In fact, all we need to do is to find the coefficients given any initial conditi
 
 #### Approximated Equation
 
-Given a complicated initial condition, the analytical approach is not solvable.
+Given a complicated initial condition, the analytical approach is not easily solvable. So we turn to numerical method for help.
+
+*If the large scale oscillations are the concern, we only need the small ${}_n$s.*
 
 
 
