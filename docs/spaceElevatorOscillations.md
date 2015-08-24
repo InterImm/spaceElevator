@@ -137,13 +137,13 @@ g(x) = -\frac{GM}{x^2} + x\Omega^2.
 The tension is defined as $dT = d(\sigma A)$. The assumption of constant stress $\sigma(x) = \sigma_0$ takes us to the result that
 
 \begin{equation}
-\frac{dA(x)}{dx} = -\sigma\rho A(x) g(x).
+\frac{dA(x)}{dx} = -\frac{\rho}{\sigma_0} A(x) g(x).
 \end{equation}
 
 Integrate over the equation we have [^1]
 
 \begin{equation}
-A(x)  = A _ 0 \exp{\left( \frac{\rho}{\sigma} \left[ G M \left( \frac{1}{x} - \frac{1}{x _ 0} \right) + \frac{1}{2} \Omega^2 (x^2 - x _ 0^2) \right] \right)},
+A(x)  = A _ 0 \exp{\left(- \frac{\rho}{\sigma} \left[ G M \left( \frac{1}{x} - \frac{1}{x _ 0} \right) + \frac{1}{2} \Omega^2 (x^2 - x _ 0^2) \right] \right)},
 \end{equation}
 
 where subscript ${}_0$ stands for the value at the surface. Take Earth as an example, we have $x_0=R_E$.  The cross area at surface is $A(x_0)=A_0$.
@@ -162,7 +162,7 @@ Pearson defined $\frac{A(x)}{A_0}$ to be the taper ratio. [^3]
 The term $\frac{A(x)'}{A(x)}$ we need in EoM is given by
 
 \begin{equation}
-\frac{A(x)'}{A(x)} = \frac{\rho}{\sigma_0} \left(  -\frac{GM}{x^2} + x \Omega^2 \right).
+\frac{A(x)'}{A(x)} = -\frac{\rho}{\sigma_0} \left(  -\frac{GM}{x^2} + x \Omega^2 \right).
 \end{equation}
 
 The two terms in the parentheses is the tension per unit mass on the cross area.
