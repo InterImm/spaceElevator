@@ -201,7 +201,7 @@ As a reminder, the geosynchronous orbit is the orbit that gravity is the same as
 The term $A(x)'/A(x)$ is
 
 \begin{equation}
-\frac{A(x)'}{A(x)} = \frac{A(\hat x_E)'}{R_E A(\hat x_E)} = \frac{\rho}{\sigma_0}\left(  -9.8 /\hat x_E^2 + 3.4\times 10^{-2} \hat x_E \right) \mathrm{m/s^2},
+\frac{A(x)'}{A(x)} = \frac{A(\hat x_E)'}{R_E A(\hat x_E)} = -\frac{\rho}{\sigma_0}\left(  -9.8 /\hat x_E^2 + 3.4\times 10^{-2} \hat x_E \right) \mathrm{m/s^2},
 \end{equation}
 
 where $\hat x_E = \frac{x}{R_E}$.
@@ -234,14 +234,14 @@ which gives us the geosynchronous radius of Mars.
 The expression of $A(x)'/A(x)$ is
 
 \begin{equation}
-\frac{A(\hat x)'}{A(\hat x)} = \frac{\rho}{\sigma_0} \left(  - 3.7 /\hat x^2 + 0.017 \hat x \right) \mathrm{m/s^2},
+\frac{A(\hat x)'}{A(\hat x)} = -\frac{\rho}{\sigma_0} \left(  - 3.7 /\hat x^2 + 0.017 \hat x \right) \mathrm{m/s^2},
 \end{equation}
 
 where $\hat x = \frac{x}{R_M}$. At geosynchronous orbit the term becomes the largest and vanishes. At surface $\hat x = 1$ we have
 
 \begin{align}
-\frac{A(\hat x)'}{A(\hat x)} &= \frac{\rho}{\sigma_0} \left(  - 3.7  + 0.017  \right) \mathrm{m/s^2} \\
-&\approx \frac{\rho}{\sigma_0} 3.7 \mathrm{m/s^2},
+\frac{A(\hat x)'}{A(\hat x)} &= -\frac{\rho}{\sigma_0} \left(  - 3.7  + 0.017  \right) \mathrm{m/s^2} \\
+&\approx -\frac{\rho}{\sigma_0} 3.7 \mathrm{m/s^2},
 \end{align}
 
 which is usually much smaller than 1 if we explore the maximum strength of the material (which we do). [^4]
