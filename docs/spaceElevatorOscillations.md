@@ -108,11 +108,11 @@ u_{xx} - u_{tt} \frac{\rho}{\sigma_0}=0.
 We assume a simple boundary condition for $u(x,t)$ that
 
 \begin{align}
-u(0,t) &= 0 \\
-u(L,t) & = 0,
+u(R,t) &= 0 \\
+u(R+L,t) & = 0,
 \end{align}
 
-where $L$ is the upper end of the cable.
+where $L$ is the length of the cable.
 
 **This boundary condition imposes the cable to be stationary on both ends. It makes sense since the lower end with be a ground station while the upper end will be attached to a very heavy space station.**
 
@@ -280,6 +280,7 @@ As some examples,
 
 #### Analytical Attempt for The Complete Oscillation
 
+For simplicity, we define a new distance $\bar x=x-R$.
 
 Assuming separable variables $u(x,t) = X(x)T(t)$, we have
 
@@ -290,8 +291,8 @@ Assuming separable variables $u(x,t) = X(x)T(t)$, we have
 where $v=\sqrt{\frac{\rho}{\sigma_0}}$. The boundary condition becomes
 
 \begin{align}
-X(0) &= 0 \\
-X(L) & = 0.
+X(R) &= 0 \\
+X(R+L) & = 0.
 \end{align}
 
 Thus the only possibility is that
@@ -315,7 +316,7 @@ Plug in the expression for $A(x')/A(x)$ we have the equation for $X$,
 X'' + \frac{\rho}{\sigma_0} \left( -\frac{GM}{x^2} + x\Omega^2 \right) X' + g X =0,
 \end{equation}
 
-which has a Sturm-Liouville form as it has a vanishing boundary condition at both ends
+which has a Sturm-Liouville form as it has a vanishing boundary condition at $R$ and $R+L$,
 
 \begin{equation}
 \frac{d}{x} \left(  p(x) \frac{d X}{dx} \right)  + q(x)X = 0, 
@@ -329,7 +330,7 @@ q(x) & = g \cdot p(x).
 \end{align}
 
 
-Since we don't really need to solve the complete oscillation due to the fact that $A(x)'/A(x)\ll 1$, it doesn't make a difference whether we could find the analytical solution.
+Since we don't really need to solve the exact oscillation due to the fact that $A(x)'/A(x)\ll 1$, it doesn't make a difference whether we could find the analytical solution.
 
 
 #### Approximation
@@ -345,10 +346,10 @@ u_{xx} - u_{tt} \frac{\rho}{\sigma_0}=0.
 
 The period of the system is given by $P = \frac{2 L}{m}\sqrt{ \frac{\rho}{\sigma_0} }$, in which $L$ is the total length, $m=0,\pm 1,\pm 2,\cdots$ is the oscillation mode.
 
-The solution to the wave equation is, in general,
+The equation doesn't change as we define a new displacement variable $\bar x = x-R$. The solution to the wave equation is, in general,
 
 \begin{equation}
-u(x,t) = \sum_{n=1}^{\infty} \left(  A_n \cos \frac{n\pi v t}{L} + B_n \sin \frac{n\pi v t}{L} \right) \sin \frac{n\pi x}{L},
+u(\bar x,t) = \sum_{n=1}^{\infty} \left(  A_n \cos \frac{n\pi v t}{L} + B_n \sin \frac{n\pi v t}{L} \right) \sin \frac{n\pi \bar x}{L},
 \end{equation}
 
 where $v=\sqrt{\frac{\rho}{\sigma_0}}$ is the wave speed.
@@ -357,21 +358,21 @@ where $v=\sqrt{\frac{\rho}{\sigma_0}}$ is the wave speed.
 To determine the coefficients we need to apply the initial condition
 
 \begin{align}
-u(x,0) & = u_0(x) \\
-\dot u(x,0) & = u_1(x).
+u(\bar x,0) & = u_0(\bar x) \\
+\dot u(\bar x,0) & = u_1(\bar x).
 \end{align}
 
 As an example we assume that we have a initial condition that the first mode of the oscillation has been excited,
 
 \begin{align}
-u(x,0) & = \Phi \sin(\pi x/L) \\
-\dot u(x,0) & = 0.
+u(\bar x,0) & = \Phi \sin(\pi \bar x/L) \\
+\dot u(\bar x,0) & = 0.
 \end{align}
 
 Only the $A_1=\Phi$ will be part of the solution
 
 \begin{equation}
-u(x,t) = \Phi \cos \frac{\pi v t}{L} \sin \frac{\pi x}{L} .
+u(\bar x,t) = \Phi \cos \frac{\pi v t}{L} \sin \frac{\pi \bar x}{L} .
 \end{equation}
 
 
@@ -380,22 +381,22 @@ In fact, all we need to do is to find the coefficients given any initial conditi
 As a general discussion, initial condition
 
 \begin{align}
-u(x,0) & = u_0(x) \\
-\dot u(x,0) & = u_1(x),
+u(\bar x,0) & = u_0(\bar x) \\
+\dot u(\bar x,0) & = u_1(\bar x),
 \end{align}
 
 together with the solution
 
 \begin{align}
-u(x,t) &= \sum_{n=1}^{\infty} \left(  A_n \cos \frac{n\pi v t}{L} + B_n \sin \frac{n\pi v t}{L} \right) \sin \frac{n\pi x}{L}\\
-& = \sum_{n=1}^{\infty} \left(  A_n \cos ( k_n v t)+ B_n \sin (k_n vt) \right) \sin ( k_n  x),
+u(\bar x,t) &= \sum_{n=1}^{\infty} \left(  A_n \cos \frac{n\pi v t}{L} + B_n \sin \frac{n\pi v t}{L} \right) \sin \frac{n\pi \bar x}{L}\\
+& = \sum_{n=1}^{\infty} \left(  A_n \cos ( k_n v t)+ B_n \sin (k_n vt) \right) \sin ( k_n \bar  x),
 \end{align}
 
 in which $k_n = \frac{n\pi }{L}$,  result in
 
 \begin{align}
-u_0(x) &= \sum_{n=1}^{\infty} A_n \sin (k_n x) , \\
-u_1(x) & = \sum_{n=1}^{\infty} B_n k_n v \sin(k_n x).
+u_0(\bar x) &= \sum_{n=1}^{\infty} A_n \sin (k_n \bar  x) , \\
+u_1(\bar  x) & = \sum_{n=1}^{\infty} B_n k_n v \sin(k_n \bar x).
 \end{align}
 
 
@@ -408,8 +409,8 @@ u_1(x) & = \sum_{n=1}^{\infty} B_n k_n v \sin(k_n x).
 We apply the orthogonality of sines and cosines to the initial condition,
 
 \begin{align}
-A_m  & = \frac{1}{L} \int_0^{2L} u_0(x) \sin ( k_m x), \\
-B_m &= \frac{1}{m \pi v} \int_0^{2L} u_1(x) \sin(k_m x).
+A_m  & = \frac{1}{L} \int_0^{2L} u_0(\bar x) \sin ( k_m x), \\
+B_m &= \frac{1}{m \pi v} \int_0^{2L} u_1(\bar x) \sin(k_m x).
 \end{align}
 
 
